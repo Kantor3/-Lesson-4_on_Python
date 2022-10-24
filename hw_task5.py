@@ -23,7 +23,7 @@ def is_numeric(s_number):
         return False
 
 
-# Выравнивание размеров списков с достройкой заданным числом (символом)
+# Выравнивание размеров списков с достройкой заданным символом
 def alignment_size(lst_1, lst_2, compl_symb=None):
     max_len = max(len(lst_1), len(lst_2))
     lst_1 += [compl_symb] * (max_len - len(lst_1))
@@ -39,8 +39,8 @@ if __name__ == '__main__':
                                for el in polynom.split(' + ')]
 
     get_degree = lambda el: 0 if is_numeric(el[-1]) else \
-        1 if el[-1] == symb_term else \
-            int(get_ss.get_superscript(el[1], rev=True))
+                            1 if el[-1] == symb_term else \
+                            int(get_ss.get_superscript(el[1], rev=True))
 
     get_els = lambda cfp, el: [0] * (get_degree(el) - len(cfp)) + [int(el[0]) if int(el[0]) else 1]
     get_cfp = lambda polynom: reduce(lambda cfp, el: cfp + get_els(cfp, el), get_lst(polynom), [])
