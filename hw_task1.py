@@ -62,9 +62,6 @@ def pi(precision, method=1, max_iteration=50):
 
     for pi_refund in gen_pi:
         if pi_refund[0] // divider == pi_spec_acc:
-            #
-            # print(f'pi_refund[0] // divider = {pi_refund[0] // divider}, pi_spec_acc = {pi_spec_acc}')
-            #
             return pi_refund
     else:
         return method, False

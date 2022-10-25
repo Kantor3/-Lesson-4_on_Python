@@ -9,7 +9,6 @@ from functools import reduce
 # Считываем данные из файла
 def get_data_file(name_file):
     with open(name_file, 'r', encoding='utf8') as f:
-        # list_str = list([el for el in f])
         str_read = f.read()
     return str_read
 
